@@ -1,0 +1,22 @@
+root = true
+
+# global rules
+[*]
+indent_size = 4 # Should be 8 but people will flame me.
+indent_style = tab # Less is more.
+charset = utf-8 # I don't speak chinese.
+end_of_line = lf # Why is CRLF even an option?
+insert_final_newline = true # Ain't a file otherwise.
+trim_trailing_whitespace = true # No comment.
+
+# yaml indentation rules suck.
+[{*.yml,*.yaml}]
+indent_size = 2
+indent_style = space
+
+# I don't wanna mess with those.
+[{package-lock.json,package.json,node_modules/*,build/*}]
+indent_size = unset
+indent_style = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
